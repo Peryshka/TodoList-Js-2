@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TODO List</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lora:wght@700&family=Nanum+Gothic:wght@800&family=Noto+Sans&family=Oxygen:wght@400;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="page-wrap">
+  <div class="container">
+    <!---Todo Add Block---->
+    <div class="todo_add_block">
+      <form name="form" id="formId">
+        <h2 class="title">TodoInput</h2>
+        <div class="custom-input">
+          <div class="input-wrap" id="input-wrap">
+            <i class="book-icon"></i>
+            <label for="input-text" class="label-elem">
+              <input type="text" name="input" id="input-text"  placeholder="New Todo">
+            </label>
+          </div>
+          <button type="submit" name="addBtn">Add new task</button>
+        </div>
+        <!---The end of Todo Add Block---->
+      </form>
+    </div>
+    <!----ToDo List--->
+    <div class="todoList-block">
+      <h2 class="title todoList">TodoList</h2>
+      <ul class="list">
+      </ul>
+    </div>
+    <!----The end of ToDo List--->
+    <div class="clear-btn-wrap">
+      <button class="clear-all">
+        Clear TodoList
+      </button>
+    </div>
+  </div>
+</div>
+<script src="./main.js"></script>
+</body>
+</html>
