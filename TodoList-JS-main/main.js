@@ -141,7 +141,6 @@ function removeElement(e) {
 //function to edit element
 function editElement(e, id) {
   const element = document.querySelector('.todoName');
-
   editElem = element;
   input.value = editElem.textContent;
   addlist.textContent = 'Edit';
@@ -181,10 +180,17 @@ function chooseDoneElements(e) {
 //function to clear all items
 function clearAllList(e) {
   const elements = document.querySelectorAll('.list-item');
+  const items = getLocalStorage()
+  console.log(elements);
   elements.forEach(item => {
     item.remove();
   })
+  let updatedList = items.map(item => {
+    localStorage.removeItem(item);
+  })
   displayAlert("All list has been cleared!");
+  updatedList = [];
+  localStorage.setItem('todolist', updatedList);
 };
 
 
